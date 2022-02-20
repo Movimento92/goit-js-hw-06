@@ -5,4 +5,16 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
-];
+]
+
+const list = document.querySelector('#ingredients')
+console.log(list)
+
+const elements = ingredients.map((ingredient) => {
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  liEl.classList.add('item')
+  return liEl
+})
+console.log(elements)
+list.append(...elements)
